@@ -42,7 +42,7 @@ equally.
 
 ```bash
 python run_eval.py --n 4000 --seed 7   # ~20s, writes results/report.html
-python -m pytest tests/ -q             # 7 invariant tests
+python -m pytest tests/ -q             # 8 invariant tests
 ```
 
 Open `results/report.html` for the same numbers with a clickable audit trail.
