@@ -1,0 +1,243 @@
+{
+  "corpus_test": {
+    "n": 2400,
+    "at_risk_inr": 8324252.0,
+    "by_root_cause": {
+      "LIMIT": 136,
+      "USER_DROP": 628,
+      "OUTAGE": 276,
+      "FUNDS": 544,
+      "DEAD_INSTRUMENT": 366,
+      "TRANSIENT_TECH": 258,
+      "RISK_BLOCK": 192
+    },
+    "by_error_code": {
+      "LIMIT_EXCEEDED": 86,
+      "AUTH_ABANDONED": 383,
+      "ISSUER_DOWN": 154,
+      "DO_NOT_HONOUR": 290,
+      "CARD_EXPIRED": 79,
+      "GATEWAY_TIMEOUT": 283,
+      "INSUFFICIENT_FUNDS": 456,
+      "UPI_APP_TIMEOUT": 342,
+      "RISK_DECLINED_RZP": 118,
+      "MANDATE_REVOKED": 68,
+      "INVALID_VPA": 69,
+      "CARD_BLOCKED": 72
+    },
+    "by_flow": {
+      "checkout": 1478,
+      "subscription": 575,
+      "invoice": 347
+    },
+    "out_of_band_payers": 134
+  },
+  "strategies": [
+    {
+      "at_risk_inr": 8324252.0,
+      "recoverable_ceiling_inr": 7210481.0,
+      "recovered_inr": 0.0,
+      "recovery_rate_value": 0.0,
+      "recovery_rate_count": 0.0,
+      "share_of_ceiling": 0.0,
+      "cost_inr": 0.0,
+      "net_inr": 0.0,
+      "actions": 0,
+      "actions_per_txn": 0.0,
+      "cost_per_rupee_recovered": null,
+      "double_charges": 0,
+      "wasted_attempts_on_dead_instruments": 0,
+      "strategy": "do_nothing"
+    },
+    {
+      "at_risk_inr": 8324252.0,
+      "recoverable_ceiling_inr": 7210481.0,
+      "recovered_inr": 2331056.0,
+      "recovery_rate_value": 0.28,
+      "recovery_rate_count": 0.2767,
+      "share_of_ceiling": 0.3233,
+      "cost_inr": 8396.0,
+      "net_inr": 2322660.0,
+      "actions": 4198,
+      "actions_per_txn": 1.75,
+      "cost_per_rupee_recovered": 0.0036,
+      "double_charges": 0,
+      "wasted_attempts_on_dead_instruments": 1056,
+      "strategy": "immediate_retry_x2"
+    },
+    {
+      "at_risk_inr": 8324252.0,
+      "recoverable_ceiling_inr": 7210481.0,
+      "recovered_inr": 3925386.0,
+      "recovery_rate_value": 0.4716,
+      "recovery_rate_count": 0.3721,
+      "share_of_ceiling": 0.5444,
+      "cost_inr": 22378.0,
+      "net_inr": 3903008.0,
+      "actions": 5564,
+      "actions_per_txn": 2.32,
+      "cost_per_rupee_recovered": 0.0057,
+      "double_charges": 75,
+      "wasted_attempts_on_dead_instruments": 1540,
+      "strategy": "fixed_24h_x3"
+    },
+    {
+      "at_risk_inr": 8324252.0,
+      "recoverable_ceiling_inr": 7210481.0,
+      "recovered_inr": 4706408.0,
+      "recovery_rate_value": 0.5654,
+      "recovery_rate_count": 0.5508,
+      "share_of_ceiling": 0.6527,
+      "cost_inr": 9008.55,
+      "net_inr": 4697399.45,
+      "actions": 4992,
+      "actions_per_txn": 2.08,
+      "cost_per_rupee_recovered": 0.0019,
+      "double_charges": 35,
+      "wasted_attempts_on_dead_instruments": 472,
+      "strategy": "link_blast"
+    },
+    {
+      "at_risk_inr": 8324252.0,
+      "recoverable_ceiling_inr": 7210481.0,
+      "recovered_inr": 5230013.0,
+      "recovery_rate_value": 0.6283,
+      "recovery_rate_count": 0.6092,
+      "share_of_ceiling": 0.7253,
+      "cost_inr": 10375.05,
+      "net_inr": 5219637.95,
+      "actions": 4608,
+      "actions_per_txn": 1.92,
+      "cost_per_rupee_recovered": 0.002,
+      "double_charges": 28,
+      "wasted_attempts_on_dead_instruments": 270,
+      "strategy": "agent_rules_handwritten"
+    },
+    {
+      "at_risk_inr": 8324252.0,
+      "recoverable_ceiling_inr": 7210481.0,
+      "recovered_inr": 5911887.0,
+      "recovery_rate_value": 0.7102,
+      "recovery_rate_count": 0.7188,
+      "share_of_ceiling": 0.8199,
+      "cost_inr": 10618.7,
+      "net_inr": 5901268.3,
+      "actions": 3874,
+      "actions_per_txn": 1.61,
+      "cost_per_rupee_recovered": 0.0018,
+      "double_charges": 24,
+      "wasted_attempts_on_dead_instruments": 193,
+      "strategy": "agent_rules_learned"
+    },
+    {
+      "at_risk_inr": 8324252.0,
+      "recoverable_ceiling_inr": 7210481.0,
+      "recovered_inr": 6005540.0,
+      "recovery_rate_value": 0.7215,
+      "recovery_rate_count": 0.7196,
+      "share_of_ceiling": 0.8329,
+      "cost_inr": 10335.45,
+      "net_inr": 5995204.55,
+      "actions": 3612,
+      "actions_per_txn": 1.5,
+      "cost_per_rupee_recovered": 0.0017,
+      "double_charges": 25,
+      "wasted_attempts_on_dead_instruments": 0,
+      "strategy": "agent_localclf_learned"
+    },
+    {
+      "at_risk_inr": 8324252.0,
+      "recoverable_ceiling_inr": 7210481.0,
+      "recovered_inr": 6059345.0,
+      "recovery_rate_value": 0.7279,
+      "recovery_rate_count": 0.7238,
+      "share_of_ceiling": 0.8404,
+      "cost_inr": 10431.1,
+      "net_inr": 6048913.9,
+      "actions": 3584,
+      "actions_per_txn": 1.49,
+      "cost_per_rupee_recovered": 0.0017,
+      "double_charges": 26,
+      "wasted_attempts_on_dead_instruments": 0,
+      "strategy": "[upper bound] agent_oracle_learned"
+    }
+  ],
+  "diagnosis": {
+    "agent_rules_handwritten": {
+      "accuracy": 0.8387,
+      "terminal_missed": 74,
+      "terminal_false_positive": 0,
+      "per_error_code": {
+        "AUTH_ABANDONED": 1.0,
+        "CARD_BLOCKED": 1.0,
+        "CARD_EXPIRED": 1.0,
+        "DO_NOT_HONOUR": 0.0,
+        "GATEWAY_TIMEOUT": 1.0,
+        "INSUFFICIENT_FUNDS": 1.0,
+        "INVALID_VPA": 1.0,
+        "ISSUER_DOWN": 1.0,
+        "LIMIT_EXCEEDED": 1.0,
+        "MANDATE_REVOKED": 1.0,
+        "RISK_DECLINED_RZP": 1.0,
+        "UPI_APP_TIMEOUT": 0.716
+      }
+    },
+    "agent_rules_learned": {
+      "accuracy": 0.8387,
+      "terminal_missed": 74,
+      "terminal_false_positive": 0,
+      "per_error_code": {
+        "AUTH_ABANDONED": 1.0,
+        "CARD_BLOCKED": 1.0,
+        "CARD_EXPIRED": 1.0,
+        "DO_NOT_HONOUR": 0.0,
+        "GATEWAY_TIMEOUT": 1.0,
+        "INSUFFICIENT_FUNDS": 1.0,
+        "INVALID_VPA": 1.0,
+        "ISSUER_DOWN": 1.0,
+        "LIMIT_EXCEEDED": 1.0,
+        "MANDATE_REVOKED": 1.0,
+        "RISK_DECLINED_RZP": 1.0,
+        "UPI_APP_TIMEOUT": 0.716
+      }
+    },
+    "agent_localclf_learned": {
+      "accuracy": 0.8013,
+      "terminal_missed": 0,
+      "terminal_false_positive": 47,
+      "per_error_code": {
+        "AUTH_ABANDONED": 1.0,
+        "CARD_BLOCKED": 1.0,
+        "CARD_EXPIRED": 1.0,
+        "DO_NOT_HONOUR": 0.666,
+        "GATEWAY_TIMEOUT": 0.0,
+        "INSUFFICIENT_FUNDS": 1.0,
+        "INVALID_VPA": 1.0,
+        "ISSUER_DOWN": 1.0,
+        "LIMIT_EXCEEDED": 1.0,
+        "MANDATE_REVOKED": 1.0,
+        "RISK_DECLINED_RZP": 1.0,
+        "UPI_APP_TIMEOUT": 0.716
+      }
+    },
+    "[upper bound] agent_oracle_learned": {
+      "accuracy": 1.0,
+      "terminal_missed": 0,
+      "terminal_false_positive": 0,
+      "per_error_code": {
+        "AUTH_ABANDONED": 1.0,
+        "CARD_BLOCKED": 1.0,
+        "CARD_EXPIRED": 1.0,
+        "DO_NOT_HONOUR": 1.0,
+        "GATEWAY_TIMEOUT": 1.0,
+        "INSUFFICIENT_FUNDS": 1.0,
+        "INVALID_VPA": 1.0,
+        "ISSUER_DOWN": 1.0,
+        "LIMIT_EXCEEDED": 1.0,
+        "MANDATE_REVOKED": 1.0,
+        "RISK_DECLINED_RZP": 1.0,
+        "UPI_APP_TIMEOUT": 1.0
+      }
+    }
+  }
+}
